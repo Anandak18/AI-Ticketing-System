@@ -1,0 +1,2026 @@
+[
+  {
+    "ticket_no": "TICKET-0001",
+    "description": "I can't access the CRM; every time I try to load customer profiles it hangs. It's a low-severity bug that's slowing me down.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:41.766087Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0002",
+    "description": "I'm getting errors in the ERP when I post invoices. This medium-severity incident is holding up billing.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 1.0,
+        "affected_system": 0.95
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:44.059510Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0003",
+    "description": "I requested a change but the Email System notifications never arrived. It's a high-severity service request for our team updates.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:46.455338Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0004",
+    "description": "I need to update our database schema but the tool won’t let me save. It's a critical-severity change that’s blocking new reports.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.85,
+        "severity": 0.95,
+        "affected_system": 0.8
+      },
+      "aggregate_confidence": 0.86
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:48.467272Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0005",
+    "description": "The Network is down intermittently and I can’t reach any sites. This is a low-severity outage but it’s annoying my remote work.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:50.715984Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0006",
+    "description": "I noticed a bug in the Web Portal where the dashboard widgets overlap. It's a medium-severity bug affecting usability.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 1.0,
+        "severity": 1.0,
+        "affected_system": 1.0
+      },
+      "aggregate_confidence": 1.0
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:52.933060Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0007",
+    "description": "There was an incident in the Mobile App making the login screen unresponsive. It's a high-severity incident keeping me out.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 1.0,
+        "severity": 1.0,
+        "affected_system": 1.0
+      },
+      "aggregate_confidence": 1.0
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:55.197829Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0008",
+    "description": "I filed a service request because the API documentation link is broken. This is a critical-severity service request for the dev team.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:57.347466Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0009",
+    "description": "I asked for a change to the Reporting Module but the update hasn’t appeared. It's a low-severity change request.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:08:59.389280Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0010",
+    "description": "Our Authentication Service went offline briefly. It's a medium-severity outage that caused sign-in failures.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.95
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:01.510560Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0011",
+    "description": "I keep seeing a bug in the CRM where saved contacts vanish. It's a low-severity issue but important for my tracking.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:03.516958Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0012",
+    "description": "The ERP is throwing payment errors. This medium-severity incident is delaying our vendor payouts.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:05.611233Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0013",
+    "description": "I raised a service request because the Email System filters aren’t working. It’s a high-severity request; I’m missing important mails.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:07.702444Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0014",
+    "description": "I need to roll out a database patch but migrations fail. It's a critical-severity change that’s blocking deployment.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 1.0,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:09.766211Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0015",
+    "description": "There was an outage on the Network causing slow VPN. It's a low-severity outage but frustrating when working remotely.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 1.0,
+        "severity": 1.0,
+        "affected_system": 1.0
+      },
+      "aggregate_confidence": 1.0
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:11.885600Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0016",
+    "description": "I found a bug in the Web Portal search function—it returns unrelated results. It's a medium-severity bug that wastes time.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:13.920594Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0017",
+    "description": "I reported an incident in the Mobile App where push notifications never arrive. It's a high-severity problem for user updates.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:16.082845Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0018",
+    "description": "I submitted a service request because the API rate limit is too low. It's a critical-severity request—integrations are failing.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:18.192986Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0019",
+    "description": "I asked for a change in the Reporting Module layout but nothing changed. It’s a low-severity request but I need clarity.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:20.537096Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0020",
+    "description": "I saw an outage on the Authentication Service that blocked everyone’s login. It's a medium-severity outage impacting the whole team.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 1.0,
+        "severity": 1.0,
+        "affected_system": 1.0
+      },
+      "aggregate_confidence": 1.0
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:22.808834Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0021",
+    "description": "The CRM keeps logging me out randomly. It's a low-severity bug but interrupts my workflow.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:25.567590Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0022",
+    "description": "The ERP crashed when generating reports. This medium-severity incident is disrupting month-end close.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:27.730797Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0023",
+    "description": "I need the Email System whitelist updated for a new domain. It’s a high-severity service request; we’re missing client emails.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:29.868442Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0024",
+    "description": "I requested a database index change but queries still time out. It's a critical-severity change for performance.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 1.0,
+        "affected_system": 0.8
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:32.312949Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0025",
+    "description": "Our Network speed dipped below acceptable levels. It's a low-severity outage but slows down file transfers.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:34.583712Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0026",
+    "description": "I noticed the Web Portal profile page layout is broken. It's a medium-severity bug making edits difficult.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:36.494059Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0027",
+    "description": "There was an incident in the Mobile App causing crashes on startup. It's a high-severity issue for all mobile users.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:38.568946Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0028",
+    "description": "I submitted a service request to increase API timeouts. It's a critical-severity request—calls are failing constantly.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:41.200233Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0029",
+    "description": "I asked to change the default report in the Reporting Module but the system ignores it. It's a low-severity change.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 1.0,
+        "affected_system": 0.8
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:43.398917Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0030",
+    "description": "The Authentication Service rejected valid credentials yesterday. It's a medium-severity outage causing login confusion.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:45.624325Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0031",
+    "description": "I have a bug in the CRM where export to CSV skips fields. It's a low-severity problem but I need complete data.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:47.947694Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0032",
+    "description": "The ERP shows wrong tax calculations. This medium-severity incident is affecting invoices.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:50.136671Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0033",
+    "description": "I need a service request to whitelist new email domains. It's a high-severity request—clients’ mails bounce.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.9,
+        "affected_system": 0.8
+      },
+      "aggregate_confidence": 0.88
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:52.341826Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0034",
+    "description": "I rolled out a database change but it broke backups. It's a critical-severity change—backup failures are risky.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:54.354193Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0035",
+    "description": "Our Network VPN disconnects randomly. It's a low-severity outage but disrupts meetings.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:56.640769Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0036",
+    "description": "I see a bug where the Web Portal calendar doesn’t show events. It's a medium-severity bug causing missed appointments.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:09:59.461950Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0037",
+    "description": "I opened an incident because the Mobile App can’t upload photos. It's a high-severity issue for field teams.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.9,
+        "affected_system": 0.95
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:01.600138Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0038",
+    "description": "I filed a service request to reset our API keys. It's a critical-severity request—integrations are failing.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:05.513373Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0039",
+    "description": "I need to change the default dashboard in the Reporting Module but it didn’t update. It's a low-severity change.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 1.0,
+        "affected_system": 0.95
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:08.179420Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0040",
+    "description": "The Authentication Service timed out yesterday. It's a medium-severity outage causing login delays.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:10.553267Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0041",
+    "description": "There's a bug in the CRM email integration—outgoing mails aren’t sent. It's a low-severity bug but frustrating.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:12.829578Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0042",
+    "description": "The ERP login page is slow. This medium-severity incident delays my daily tasks.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:14.960020Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0043",
+    "description": "I raised a service request because the Email System auto-archive is incorrectly flagging messages. It's a high-severity issue.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:17.550718Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0044",
+    "description": "I need a database connection string change but can’t update it. It's a critical-severity change blocking tool access.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:19.763310Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0045",
+    "description": "Our Network firewalls are blocking some websites. It's a low-severity outage but I need them for research.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:22.135467Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0046",
+    "description": "I see a bug in the Web Portal export feature—it overlaps text. It's a medium-severity bug affecting reports.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:24.322785Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0047",
+    "description": "I logged an incident because the Mobile App GPS tracking isn’t accurate. It's a high-severity problem for logistics.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:26.688183Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0048",
+    "description": "I requested service to increase API throughput. It's a critical-severity service request—calls time out constantly.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.9,
+        "affected_system": 0.8
+      },
+      "aggregate_confidence": 0.88
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:29.381221Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0049",
+    "description": "I asked for a change in the Reporting Module filters but they didn’t apply. It’s a low-severity change.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:31.738592Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0050",
+    "description": "The Authentication Service gave me an unknown error. It's a medium-severity outage stopping logins.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:36.906614Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0051",
+    "description": "I encountered a bug in the CRM where tasks duplicate. It's a low-severity bug but clutters my task list.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 1.0,
+        "severity": 1.0,
+        "affected_system": 1.0
+      },
+      "aggregate_confidence": 1.0
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:39.413980Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0052",
+    "description": "The ERP failed to calculate discounts. This medium-severity incident is affecting quotes.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:41.453516Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0053",
+    "description": "I need a service request to change my email signature settings in the Email System. It's a high-severity need for branding.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.8,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.88
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:43.543942Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0054",
+    "description": "I implemented a database change but data got corrupted. It's a critical-severity change causing data loss.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 1.0,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:46.171915Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0055",
+    "description": "Our Network packet loss spiked. It's a low-severity outage but audio calls cut out.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:48.672653Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0056",
+    "description": "I see a bug in the Web Portal notifications—they repeat. It's a medium-severity bug annoying users.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 1.0,
+        "severity": 1.0,
+        "affected_system": 1.0
+      },
+      "aggregate_confidence": 1.0
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:51.404700Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0057",
+    "description": "I reported an incident in the Mobile App where I can’t update my profile. It's a high-severity issue for users.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:53.424958Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0058",
+    "description": "I submitted a service request to add new endpoints to the API. It's a critical-severity need for integration.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:55.726176Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0059",
+    "description": "I asked for a change in the Reporting Module date picker but it’s still wrong. It's a low-severity request.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 1.0,
+        "affected_system": 0.95
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:57.859896Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0060",
+    "description": "The Authentication Service locked out users yesterday. It's a medium-severity outage causing support tickets.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:10:59.978481Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0061",
+    "description": "I found a bug in the CRM phone dialer integration. It's a low-severity bug but affects sales calls.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 1.0,
+        "severity": 1.0,
+        "affected_system": 1.0
+      },
+      "aggregate_confidence": 1.0
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:02.309075Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0062",
+    "description": "The ERP approval workflow got stuck. This medium-severity incident is delaying approvals.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:04.493354Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0063",
+    "description": "I need a service request to reset blocked email accounts. It's a high-severity request for our staff.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.9,
+        "affected_system": 0.8
+      },
+      "aggregate_confidence": 0.88
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:06.696736Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0064",
+    "description": "I applied a database change but lost indexes. It's a critical-severity change that’s hurting performance.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:08.686511Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0065",
+    "description": "Our Network DNS resolution fails occasionally. It's a low-severity outage but blocks some sites.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:11.561186Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0066",
+    "description": "I noticed a bug in the Web Portal theme switcher—it resets. It's a medium-severity bug on preferences.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:13.729069Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0067",
+    "description": "I opened an incident because the Mobile App camera view is blank. It's a high-severity issue for inspections.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:15.783451Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0068",
+    "description": "I filed a service request to extend API key expiry. It's a critical-severity need to avoid downtime.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:17.825536Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0069",
+    "description": "I asked to change default charts in the Reporting Module but it didn’t stick. It's a low-severity change.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 1.0,
+        "affected_system": 0.95
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:20.064523Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0070",
+    "description": "The Authentication Service delayed token refresh yesterday. It's a medium-severity outage for sessions.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:22.191435Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0071",
+    "description": "I’m seeing a bug in the CRM calendar sync—it duplicates events. It's a low-severity issue but messy.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:24.711424Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0072",
+    "description": "The ERP inventory counts are off. This medium-severity incident is affecting orders.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:26.922412Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0073",
+    "description": "I requested a service change to adjust email forwarding rules. It's a high-severity need for communications.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.9,
+        "affected_system": 0.8
+      },
+      "aggregate_confidence": 0.88
+    },
+    "proposedFix": "For a high change in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:29.473098Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0074",
+    "description": "I applied a database schema change but migrations rollback. It's a critical-severity change blocking releases.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:31.745494Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0075",
+    "description": "Our Network throughput dipped under SLAs. It's a low-severity outage but worth fixing.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:34.158242Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0076",
+    "description": "I noticed a bug on the Web Portal login button—it’s misaligned. It's a medium-severity visual bug.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:36.492406Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0077",
+    "description": "I reported an incident because the Mobile App offline mode never syncs. It's a high-severity issue for fieldwork.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.9,
+        "affected_system": 0.95
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:38.770108Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0078",
+    "description": "I submitted a service request to provision new API endpoints. It's a critical-severity need for clients.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:41.049862Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0079",
+    "description": "I asked for a change in Reporting Module permissions but no effect. It's a low-severity request.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:43.537241Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0080",
+    "description": "The Authentication Service rejected OAuth tokens. It's a medium-severity outage stopping SSO.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:46.137038Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0081",
+    "description": "I found a bug in the CRM task reminders—they never pop up. It's a low-severity issue but I miss alerts.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:48.240277Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0082",
+    "description": "The ERP purchase order screen errors out. This medium-severity incident is delaying procurement.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:50.440049Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0083",
+    "description": "I need a service request to adjust spam filters in the Email System. It's a high-severity request.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:52.698967Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0084",
+    "description": "I implemented a database change but logs fill up. It's a critical-severity change clogging storage.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:55.034761Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0085",
+    "description": "Our Network latency spikes every hour. It's a low-severity outage but noticeable during calls.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:57.222818Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0086",
+    "description": "I see a bug in the Web Portal filter panel—it freezes. It's a medium-severity issue when sorting data.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:11:59.542602Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0087",
+    "description": "I logged an incident because the Mobile App chat function disconnects. It's a high-severity issue for support teams.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:02.102080Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0088",
+    "description": "I submitted a service request to extend API logging retention. It's a critical-severity need for audits.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:04.536914Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0089",
+    "description": "I asked to change default notification settings in the Reporting Module but it didn’t apply. It's a low-severity change.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:07.281936Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0090",
+    "description": "The Authentication Service lagged on password resets. It's a medium-severity outage frustrating users.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:09.479008Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0091",
+    "description": "I’m seeing a bug in the CRM merge function—it duplicates contacts. It's a low-severity issue but tedious to clean up.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "low",
+      "affected_system": "CRM",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a low bug in CRM, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:11.681982Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0092",
+    "description": "The ERP expense approvals got stuck. This medium-severity incident is delaying reimbursements.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "medium",
+      "affected_system": "ERP",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a medium incident in ERP, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:14.635366Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0093",
+    "description": "I need a service request to add new SMTP servers to the Email System. It's a high-severity request.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "high",
+      "affected_system": "Email System",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a high service request in Email System, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:17.086840Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0094",
+    "description": "I pushed a database change but lost stored procedures. It's a critical-severity change blocking features.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "critical",
+      "affected_system": "Database",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a critical change in Database, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:19.235670Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0095",
+    "description": "Our Network DNS lookup fails on some domains. It's a low-severity outage but blocks development.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "low",
+      "affected_system": "Network",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low outage in Network, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:21.261266Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0096",
+    "description": "I noticed a bug in the Web Portal theme switcher—it reverts on refresh. It's a medium-severity annoyance.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "bug",
+      "severity": "medium",
+      "affected_system": "Web Portal",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a medium bug in Web Portal, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:23.441247Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0097",
+    "description": "I filed an incident because the Mobile App chat function disconnects. It's a high-severity issue for support teams.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "Mobile App",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.9,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.92
+    },
+    "proposedFix": "For a high incident in Mobile App, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:25.781480Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0098",
+    "description": "I submitted a service request to upgrade our API tier. It's a critical-severity request to handle load.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "service request",
+      "severity": "critical",
+      "affected_system": "API",
+      "confidence_scores": {
+        "issue_type": 0.95,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.94
+    },
+    "proposedFix": "For a critical service request in API, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:27.799071Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0099",
+    "description": "I asked for a change in the Reporting Module color scheme but no update. It's a low-severity aesthetic request.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "change",
+      "severity": "low",
+      "affected_system": "Reporting Module",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.85
+      },
+      "aggregate_confidence": 0.9
+    },
+    "proposedFix": "For a low change in Reporting Module, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:29.938306Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0100",
+    "description": "The Authentication Service token refresh delays logins. It's a medium-severity outage causing session timeouts.",
+    "status": "closed",
+    "slots": {
+      "issue_type": "outage",
+      "severity": "medium",
+      "affected_system": "Authentication Service",
+      "confidence_scores": {
+        "issue_type": 0.9,
+        "severity": 0.95,
+        "affected_system": 0.9
+      },
+      "aggregate_confidence": 0.91
+    },
+    "proposedFix": "For a medium outage in Authentication Service, clear caches/restart affected service, check recent changes and logs, and validate with a test case. If stable, roll to staging then production.",
+    "metadata": {
+      "updatedAt": "2025-08-27T16:12:32.097573Z"
+    }
+  },
+  {
+    "ticket_no": "TICKET-0101",
+    "description": "facing blue screen issue in PC",
+    "status": "needs-review",
+    "metadata": {
+      "createdAt": "2025-08-27T16:25:21.167804Z",
+      "createdBy": "chat-user",
+      "updatedAt": "2025-08-27T16:54:58.415776Z",
+      "lastReviewAction": "APPROVE"
+    },
+    "slots": {
+      "issue_type": "incident",
+      "severity": "high",
+      "affected_system": "other",
+      "confidence_scores": {
+        "issue_type": 0.8,
+        "severity": 0.7,
+        "affected_system": 0.6
+      },
+      "aggregate_confidence": 0.72
+    },
+    "review_summary": "The issue was that the RAM was in poor condition",
+    "resolution_steps": "The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again."
+  }
+]

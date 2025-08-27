@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+# Automated Ticketing Solution — FastAPI Backend
+
+This backend implements the POC described in the provided document.
+
+## How to run
+
+```bash
+python -m venv .venv && . .venv/Scripts/activate  # on Windows
+# or: source .venv/bin/activate  # on Linux/Mac
+
+pip install -r requirements.txt
+uvicorn app.main:app --host 0.0.0.0 --port 5000 --reload
+```
+
+Environment variables:
+- `OPENAI_API_KEY` (optional) — used for slot extraction via OpenAI. If absent, a simple rule-based fallback is used.
+- `TICKETS_PATH` (optional) — path to `tickets.json` (defaults to project `data/tickets.json`).
+- `MEMORY_PATH` (optional) — path to `memory.json` (defaults to project `data/memory.json`).
+
+=======
 # AI-Powered Ticketing System
 
 An automated IT ticket management solution powered by **Azure OpenAI**, **FastAPI**, and **Streamlit**.  
@@ -165,3 +186,4 @@ Pull requests are welcome! Please fork the repo and create a feature branch.
 
 ## License
 MIT License – free for personal and commercial use.  
+>>>>>>> 47547fa1c316d78786843bdbc14963ba250367ae

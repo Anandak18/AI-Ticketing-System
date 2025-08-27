@@ -1,0 +1,123 @@
+[
+  {
+    "ticketId": "TICKET-0013",
+    "summary": "Updated the deployment script to fix the environment variable issue",
+    "resolution_steps": "Updated the deployment script to fix the environment variable issue. Verified database connection works. Next step: monitor the first deployment and report any errors.",
+    "user": "reviewer@example.com",
+    "timestamp": "2025-08-26T05:50:58.374067Z"
+  },
+  {
+    "ticketId": "TICKET-0013",
+    "summary": "Updated the deployment script to fix the environment variable issue",
+    "resolution_steps": "Updated the deployment script to fix the environment variable issue. Verified database connection works. Next step: monitor the first deployment and report any errors.",
+    "user": "reviewer@example.com",
+    "timestamp": "2025-08-26T05:51:05.090093Z"
+  },
+  {
+    "ticketId": "TICKET-0013",
+    "summary": "Updated the deployment script to fix the environment variable issue",
+    "resolution_steps": "Updated the deployment script to fix the environment variable issue. Verified database connection works. Next step: monitor the first deployment and report any errors.",
+    "user": "reviewer@example.com",
+    "timestamp": "2025-08-26T05:54:37.101726Z"
+  },
+  {
+    "ticketId": "TICKET-0013",
+    "summary": "Updated the deployment script to fix the environment variable issue",
+    "resolution_steps": "Updated the deployment script to fix the environment variable issue. Verified database connection works. Next step: monitor the first deployment and report any errors.",
+    "user": "reviewer@example.com",
+    "timestamp": "2025-08-26T05:56:26.105995Z"
+  },
+  {
+    "ticketId": "TICKET-0013",
+    "summary": "Updated the deployment script to fix the environment variable issue",
+    "resolution_steps": "Updated the deployment script to fix the environment variable issue. Verified database connection works. Next step: monitor the first deployment and report any errors.",
+    "user": "reviewer@example.com",
+    "timestamp": "2025-08-26T05:57:53.668312Z"
+  },
+  {
+    "ticketId": "TICKET-0023",
+    "summary": "I verified the Web Portal dashboard widgets overlap issue has been fixed",
+    "resolution_steps": "I verified the Web Portal dashboard widgets overlap issue has been fixed. Please deploy the updated layout to staging and test thoroughly before production release.",
+    "user": "reviewer@example.com",
+    "timestamp": "2025-08-26T07:23:50.934166Z"
+  },
+  {
+    "ticketId": "TICKET-0101",
+    "summary": "The details are sufficient to work on this ticket so we are rejecting it if anything comes with proper details in future we will work on it",
+    "resolution_steps": "The details are sufficient to work on this ticket so we are rejecting it if anything comes with proper details in future we will work on it",
+    "user": "reviewer@example.com",
+    "timestamp": "2025-08-27T07:01:18.370001Z"
+  },
+  {
+    "ticketId": "TICKET-0101",
+    "summary": "The issue was that the RAM was in poor condition",
+    "resolution_steps": "The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again.",
+    "user": "chat-user",
+    "timestamp": "2025-08-27T15:25:01.083633Z",
+    "action": "APPROVE"
+  },
+  {
+    "user_message": "TICKET-0101 is now closed. The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again.",
+    "bot_response": "✅ Ticket TICKET-0101 reviewed successfully.\nStatus: APPROVED\nAggregate Confidence: 0.72",
+    "timestamp": "2025-08-27T15:25:03.347986Z"
+  },
+  {
+    "ticketId": "TICKET-0101",
+    "summary": "The issue was that the RAM was in poor condition",
+    "resolution_steps": "The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again.",
+    "user": "chat-user",
+    "timestamp": "2025-08-27T15:32:07.232249Z",
+    "action": "APPROVE"
+  },
+  {
+    "user_message": "TICKET-0101 is now closed. The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again.",
+    "bot_response": "✅ Ticket TICKET-0101 reviewed successfully.\nStatus: APPROVED\nAggregate Confidence: 0.75",
+    "timestamp": "2025-08-27T15:32:09.417858Z"
+  },
+  {
+    "ticketId": "TICKET-0101",
+    "summary": "The issue was that the RAM was in poor condition",
+    "resolution_steps": "The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again.",
+    "user": "chat-user",
+    "timestamp": "2025-08-27T15:35:03.151612Z",
+    "action": "APPROVE"
+  },
+  {
+    "user_message": "TICKET-0101 is now closed. The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again.",
+    "bot_response": "✅ Ticket TICKET-0101 reviewed successfully.\nStatus: APPROVED\nAggregate Confidence: 0.76",
+    "timestamp": "2025-08-27T15:35:05.410171Z"
+  },
+  {
+    "user_message": "Create a ticket",
+    "bot_response": "Please use the format: 'New ticket: description'",
+    "timestamp": "2025-08-27T15:38:04.021609Z"
+  },
+  {
+    "user_message": "New ticket: facing blue screen issue in PC",
+    "bot_response": "✅ Ticket TICKET-0102 created!\nDescription: facing blue screen issue in PC\nStatus: Open",
+    "timestamp": "2025-08-27T15:44:59.642204Z"
+  },
+  {
+    "user_message": "New ticket: facing blue screen issue in PC",
+    "bot_response": "✅ Ticket TICKET-0101 created!\nDescription: facing blue screen issue in PC\nStatus: Open",
+    "timestamp": "2025-08-27T16:25:21.172815Z"
+  },
+  {
+    "user_message": "show me the ticket details which has human review",
+    "bot_response": "The ticket with human review is TICKET-0101. It had the issue \"facing blue screen issue in PC\" with status \"needs-review\" initially. The review concluded the issue was due to poor RAM condition, which was cleaned and the system restarted, resolving the problem. The ticket was then approved and closed.",
+    "timestamp": "2025-08-27T16:28:33.247430Z"
+  },
+  {
+    "ticketId": "TICKET-0101",
+    "summary": "The issue was that the RAM was in poor condition",
+    "resolution_steps": "The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again.",
+    "user": "chat-user",
+    "timestamp": "2025-08-27T16:54:00.392689Z",
+    "action": "APPROVE"
+  },
+  {
+    "user_message": "TICKET-0101 is now closed. The issue was that the RAM was in poor condition. We cleaned and restarted the system, which resolved the problem. Monitor the system for stability over the next 24 hours and replace the RAM if similar issues occur again.",
+    "bot_response": "✅ Ticket TICKET-0101 reviewed successfully.\nStatus: APPROVED\nSummary: The issue was that the RAM was in poor condition",
+    "timestamp": "2025-08-27T16:54:00.396759Z"
+  }
+]
