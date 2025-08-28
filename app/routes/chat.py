@@ -9,7 +9,7 @@ import os
 from openai import AzureOpenAI
 from typing import Dict, List, Optional
 from ..services.comment_validator import is_valid_comment
-from ..config import TICKETS_PATH,MEMORY_PATH
+from ..config import TICKETS_PATH,MEMORY_PATH,CONFIDENCE_CLOSE_THRESHOLD
 
 router = APIRouter()
 # ------------------------------
@@ -20,14 +20,6 @@ client = AzureOpenAI(
     api_version="2024-02-15-preview",
     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
 )
-
-# ------------------------------
-# Memory handlers
-# ------------------------------
-
-
-
-
 
 # ------------------------------
 # Azure LLM Intent Detection
@@ -71,22 +63,43 @@ def chat(req: ChatRequest):
             if not desc:
                 response_message = "Please provide a description for the ticket."
             else:
-                existing_nums = [int(t["ticket_no"].split("-")[1]) for t in tickets if t.get("ticket_no", "").startswith("TICKET-")]
+                existing_nums = [
+                    int(t["ticket_no"].split("-")[1])
+                    for t in tickets
+                    if t.get("ticket_no", "").startswith("TICKET-")
+                ]
                 next_num = max(existing_nums) + 1 if existing_nums else 1
                 new_id = f"TICKET-{next_num:04d}"
+
+                # ✅ Extract slots immediately
+                slots = extract_with_openai(desc)
+
+                # ✅ Decide status based on confidence
+                if slots["aggregate_confidence"] < CONFIDENCE_CLOSE_THRESHOLD:
+                    status = "needs-review"
+                else:
+                    status = "closed"
 
                 new_ticket = {
                     "ticket_no": new_id,
                     "description": desc,
-                    "status": "open",
+                    "status": status,
                     "metadata": {
-                        "createdAt": datetime.utcnow().isoformat() + 'Z',
+                        "createdAt": datetime.utcnow().isoformat() + "Z",
                         "createdBy": "chat-user"
-                    }
+                    },
+                    "slots": slots
                 }
+
                 tickets.append(new_ticket)
                 save_json(TICKETS_PATH, tickets)
-                response_message = f"✅ Ticket {new_id} created!\nDescription: {desc}\nStatus: Open"
+
+                response_message = (
+                    f"✅ Ticket {new_id} created!\n"
+                    f"Description: {desc}\n"
+                    f"Status: {status}\n"
+                    f"(slots extracted at creation, confidence={slots['aggregate_confidence']:.2f})"
+                )
         else:
             response_message = "Please use the format: 'New ticket: description'"
 

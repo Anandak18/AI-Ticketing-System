@@ -42,23 +42,24 @@ def propose_fix(result: Dict) -> str:
             f"check recent changes and logs, and validate with a test case. "
             f"If stable, roll to staging then production.")
 
-
 async def process_tickets_once(tickets_path: Path):
     data = load_json(tickets_path)
     changed = False
     for t in data:
-        if t.get('aggregate_confidence') is not None or t.get('status') in ('closed', 'needs-review'):
+        if (
+            t.get('status') in ('closed', 'needs-review')
+            or ("slots" in t and t["slots"].get("aggregate_confidence") is not None)
+        ):
             continue
+
+        # 👇 New ticket found
+        logging.info(f"[Ticket {t['ticket_no']}] New ticket found. Processing...")
 
         desc = t.get('description', '')
         result = extract_with_openai(desc)
 
-        # agg = weighted_confidence(result)
         t['slots'] = result
-        # t['aggregate_confidence'] = round(agg, 4)
-        result["aggregate_confidence"]
-
-        logging.info(f"[Ticket {t['ticket_no']}] Aggregate confidence = {result["aggregate_confidence"]}")
+        logging.info(f"[Ticket {t['ticket_no']}] Aggregate confidence = {result['aggregate_confidence']}")
 
         if result["aggregate_confidence"] >= CONFIDENCE_CLOSE_THRESHOLD:
             t['proposedFix'] = propose_fix(result)

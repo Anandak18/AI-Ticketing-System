@@ -40,23 +40,27 @@ def is_valid_comment(comment: str) -> dict:
 
     # Build LLM prompt
     messages = [
-        {
-            "role": "system",
-            "content": (
-                "You are a ticket review assistant. Validate and, if necessary, correct user comments "
-                "for ticket reviews. Rules:\n"
-                "1. Must be at least 15 words.\n"
-                "2. Must describe what changed in the ticket.\n"
-                "3. Should explain why the change was made (optional but recommended).\n"
-                "4. Must include at least one actionable step (e.g., deploy, test, monitor, restart, rollback).\n"
-                "IMPORTANT: Respond only in valid JSON with keys:\n"
-                "  - valid (true/false)\n"
-                "  - message (reason if invalid or confirmation if valid)\n"
-                "  - corrected_comment (string, only if comment was invalid and corrected)"
-            )
-        },
-        {"role": "user", "content": comment}
-    ]
+    {
+        "role": "system",
+        "content": (
+            "You are a ticket review assistant. Validate user comments for ticket reviews.\n"
+            "Rules:\n"
+            "1. Must be at least 15 words.\n"
+            "2. Must describe what changed in the ticket.\n"
+            "3. Should explain why the change was made (optional).\n"
+            "4. Must include at least one actionable step (e.g., deploy, test, monitor, restart, rollback).\n"
+            "Output:\n"
+            "- If the comment is valid, respond only in JSON with keys:\n"
+            "    valid: true\n"
+            "    message: confirmation the comment is valid\n"
+            "- If the comment is invalid, respond only in JSON with keys:\n"
+            "    valid: false\n"
+            "    message: reason why it's invalid\n"
+            "    corrected_comment: provide a corrected version"
+        )
+    },
+    {"role": "user", "content": comment}
+]
 
     try:
         resp = client.chat.completions.create(
