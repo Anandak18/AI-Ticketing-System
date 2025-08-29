@@ -9,7 +9,7 @@ client = AzureOpenAI(
     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
 )
 
-# PLACEHOLDERS = ["TODO", "TBD", "XXX", "...", "placeholder"]
+
 
 def is_valid_comment(comment: str) -> dict:
     """

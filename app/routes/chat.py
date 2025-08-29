@@ -361,13 +361,13 @@ def chat(req: ChatRequest):
         response_message = "I can help you create, view, or review tickets. Example:\n• 'New ticket: login page error'\n• 'Show open tickets'\n• 'Approve ticket TICKET-0001 with comment...'"
 
     # ------------------- SAVE CHAT -------------------
-    # memory_entry = {
-    #     "user_message": req.message,
-    #     "bot_response": response_message,
-    #     "timestamp": datetime.utcnow().isoformat() + 'Z'
-    # }
-    # memory.append(memory_entry)
-    # save_json(MEMORY_PATH,memory)
+    memory_entry = {
+        "user_message": req.message,
+        "bot_response": response_message,
+        "timestamp": datetime.utcnow().isoformat() + 'Z'
+    }
+    memory.append(memory_entry)
+    save_json(MEMORY_PATH,memory)
 
     return {"message": response_message, "valid": True}
 
