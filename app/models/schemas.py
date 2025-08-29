@@ -35,10 +35,15 @@ class Ticket(BaseModel):
 class ChatRequest(BaseModel):
     message: str
 
+
+
+
 class ChatResponse(BaseModel):
     message: str
+    status: Optional[str] = None
+    chart_spec: Optional[Dict[str, Any]] = None
+    graph_image: Optional[str] = None
     updatedTicket: Optional[Ticket] = None
-
 # Review action request with validations
 class ReviewActionRequest(BaseModel):
     ticket_no: str
