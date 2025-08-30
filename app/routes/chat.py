@@ -29,23 +29,25 @@ client = AzureOpenAI(
 # ------------------------------
 def llm_intent(message: str) -> str:
     prompt = f"""
-    Classify the user message into one of these categories:
-    1. create -> when the user wants to create a new ticket
-    2. view -> when the user wants to see, check, or ask about existing tickets
-    3. update -> when the user wants to modify a ticket
-    4. review -> when the user wants to approve/reject/edit a ticket
-    5. delete -> when the user asks to delete a ticket
-    6. graph -> when the user asks for a chart, graph, plot, visualization, diagram, trend, or distribution of tickets
+Classify the user message into one of these categories:
+1. create -> when the user wants to create a new ticket
+2. view -> when the user wants to see, check, or ask about existing tickets, 
+           including counts, lists, summaries, or statistics.
+3. update -> when the user wants to modify a ticket
+4. review -> when the user wants to approve/reject/edit a ticket
+5. delete -> when the user asks to delete a ticket
+6. graph -> when the user explicitly asks for a chart, graph, plot, visualization, diagram, or trend.
 
-    Always return only one word: create, view, update, review, delete, or graph.
+Always return only one word: create, view, update, review, delete, or graph.
 
-    Message: "{message}"
-    """
+Message: "{message}"
+"""
     resp = client.chat.completions.create(
         model=os.getenv("AZURE_OPENAI_DEPLOYMENT"),
         messages=[{"role": "user", "content": prompt}],
         temperature=0
     )
+    print("INTENT",resp.choices[0].message.content.strip().lower())
     return resp.choices[0].message.content.strip().lower()
 
 # ------------------------------
