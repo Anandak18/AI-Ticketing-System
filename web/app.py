@@ -1,5 +1,5 @@
 # streamlit_ticket_chatbot.py
-import web.app as st
+import streamlit as st
 import requests
 from datetime import datetime, timezone
 import base64
