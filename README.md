@@ -1,189 +1,150 @@
-<<<<<<< HEAD
-# Automated Ticketing Solution — FastAPI Backend
+# AI-Powered Ticketing System — LangGraph Edition
 
-This backend implements the POC described in the provided document.
-
-## How to run
-
-```bash
-python -m venv .venv && . .venv/Scripts/activate  # on Windows
-# or: source .venv/bin/activate  # on Linux/Mac
-
-pip install -r requirements.txt
-uvicorn app.main:app --host 0.0.0.0 --port 5000 --reload
-```
-
-Environment variables:
-- `OPENAI_API_KEY` (optional) — used for slot extraction via OpenAI. If absent, a simple rule-based fallback is used.
-- `TICKETS_PATH` (optional) — path to `tickets.json` (defaults to project `data/tickets.json`).
-- `MEMORY_PATH` (optional) — path to `memory.json` (defaults to project `data/memory.json`).
-
-=======
-# AI-Powered Ticketing System
-
-An automated IT ticket management solution powered by **Azure OpenAI**, **FastAPI**, and **Streamlit**.  
-The system automatically classifies, prioritizes, and resolves IT support tickets.  
-It combines backend intelligence (FastAPI + Azure OpenAI) with a simple frontend (Streamlit chat UI).  
-
----
+An automated IT ticket management solution powered by **Azure OpenAI**, **FastAPI**, **LangGraph**, and **Streamlit**.
+The system classifies, prioritizes, and resolves IT support tickets using a **graph-based workflow** instead of individual route files.
 
 ## Features
-- **Smart Ticket Classification** → Extracts:
-  - `issue_type` → bug, outage, incident, request, change  
-  - `severity` → low, medium, high, critical  
-  - `affected_system` → CRM, ERP, Email, Network, Database, Mobile App, Web Portal, etc.  
-- **Confidence Scoring** → Auto-closes tickets when AI confidence ≥ 85%, else escalates for review.  
-- **Proposed Fix Generator** → Suggests possible fixes for high-confidence cases.  
-- **FastAPI Chatbot API** → Create tickets, check status, and perform review actions.  
-- **Streamlit Frontend** → Chat-like interface for ticket interaction.  
-- **Continuous Processing** → Reads tickets from JSON every 2 minutes and updates automatically.  
-- **Human-in-the-loop Review** → Users can approve, edit, or reject AI-generated resolutions.  
 
----
+* **Graph-based Ticket Workflow** → Using LangGraph `StateGraph` for routing intents: create, view, review, delete, graph.
+* **Smart Ticket Classification** → Extracts slots:
+
+  * `issue_type` → bug, outage, incident, request, change
+  * `severity` → low, medium, high, critical
+  * `affected_system` → CRM, ERP, Email, Network, Database, Mobile App, Web Portal
+* **Confidence Scoring** → Auto-closes tickets when AI confidence ≥ threshold; otherwise marked `needs-review`.
+* **Proposed Fix Generator** → Suggests fixes for high-confidence tickets.
+* **Chatbot API** → `/api/chat` endpoint handles all ticket actions via the graph.
+* **Visualization Support** → Generate charts and graphs dynamically via LLM-guided analysis.
+* **Human-in-the-loop Review** → Users can approve/reject/edit tickets; updates saved to `memory.json`.
+* **Periodic Slot Extraction** → Every 2 minutes, open tickets are re-evaluated for updated slot extraction.
 
 ## Project Structure
+
 ```
-ai-ticketing-system/
+AI-TICKETING-SYSTEM/
 │
-├── app/                       # Core application logic
-│   ├── classifier.py          # Azure OpenAI ticket classification
-│   ├── resolver.py            # Automated fix suggestion generator
-│   ├── processor.py           # Pipeline (reads tickets.json, updates status)
-│   ├── scheduler.py           # Runs process every 2 minutes
-│   └── utils.py               # Helper functions
+├── app/
+│   ├── models/                 
+│   │   └── schemas.py
+│   ├── routes/                 
+│   │   └── chat.py             
+│   └── services/               
+│       ├── slot_extractor.py
+│       ├── comment_validator.py
+│       └── ticket_engine.py
 │
-├── api/                       # FastAPI backend
-│   ├── main.py                # FastAPI entry point
-│   ├── routes/
-│   │   ├── chat.py            # /api/chat endpoint
-│   │   └── tickets.py         # /api/tickets endpoints
-│   └── models/
-│       └── ticket.py          # Pydantic models
+├── data/                       
+│   ├── tickets.json            
+│   └── memory.json             
 │
-├── web/                       # Streamlit frontend
-│   └── app.py                 # Chat UI
+├── web/                        
+│   └── app.py                  
 │
-├── data/                      # Data storage
-│   ├── tickets.json           # Input & updated tickets
-│   └── memory.json            # Stores user-approved comments/resolutions
-│
-├── tests/                     # Unit & integration tests
-│
-├── .env                       # Azure OpenAI credentials
-├── .gitignore                 # Ignore venv, cache, etc.
-├── requirements.txt           # Python dependencies
-├── run.py                     # Project entry point (pipeline runner)
-└── README.md                  # Documentation
+├── venv/                       
+├── .env                        
+├── requirements.txt
+├── run.py                       
+└── README.md
 ```
 
----
+> **Note:** `tickets.py` route file is no longer used; all ticket logic is handled via the `StateGraph` in `chat.py`.
 
 ## Setup Instructions
 
-### 1. Clone the Repository
 ```bash
 git clone https://github.com/your-username/ai-ticketing-system.git
 cd ai-ticketing-system
-```
 
-### 2. Create a Virtual Environment
-```bash
 python -m venv venv
-source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
-```
+source venv/bin/activate   # Linux/Mac
 
-### 3. Install Dependencies
-```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure Azure OpenAI
-Create a `.env` file in the root folder:
+Configure **Azure OpenAI** by creating a `.env` file:
 
-```ini
+```
 AZURE_OPENAI_KEY=your_api_key_here
 AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
 ```
 
----
-
 ## Running the Project
 
-### 1. Run Ticket Processing Pipeline
+1. **Start FastAPI Backend**
+
 ```bash
-python run.py
+uvicorn app.routes.chat:router --reload --port 8000
 ```
-- Reads `tickets.json` every 2 minutes  
-- Classifies tickets and updates status:  
-  - **closed** → AI confident fix  
-  - **needs-review** → Escalated for human input  
 
-### 2. Run FastAPI Backend
-```bash
-uvicorn api.main:app --reload --port 8000
-```
-- API available at → `http://localhost:8000`
+* Endpoint: `POST /api/chat` handles all ticket operations (create, view, review, delete, graph).
 
-**Endpoints:**
-- `GET /api/tickets` → List all tickets  
-- `POST /api/tickets` → Create new ticket  
-- `POST /api/chat` → Chat with AI assistant  
+2. **Run Streamlit Frontend**
 
-### 3. Run Streamlit Frontend
 ```bash
 streamlit run web/app.py
 ```
-- UI available at → `http://localhost:8501`  
 
----
+* Chat UI: [http://localhost:8501](http://localhost:8501)
 
-##  Example Workflow
-1. User creates a ticket:  
-   *“The billing page freezes when I click Apply Discount.”*  
-2. AI extracts slots:  
-   - `issue_type=bug`  
-   - `severity=medium`  
-   - `affected_system=Web Portal`  
-3. Confidence = 90% → AI suggests a fix → marks ticket **closed**.  
-4. Confidence = 70% → ticket marked **needs-review** → user provides resolution via UI/API.  
-5. Approved resolution is stored in `memory.json` for audit & learning.  
+## Example Workflow
 
----
+User submits message:
+`"New ticket: CRM page crashes when saving record"`
 
-## API Examples
+* **Intent detected** → `create`
+* **Slots extracted** → `issue_type`, `severity`, `affected_system`
+* **Ticket saved with status**:
 
-### Create a Ticket
-```bash
-curl -X POST "http://localhost:8000/api/tickets" -H "Content-Type: application/json" -d '{"description": "The CRM keeps logging me out randomly."}'
-```
-
-### Check All Tickets
-```bash
-curl "http://localhost:8000/api/tickets"
-```
-
-### Chat with System
-```bash
-curl -X POST "http://localhost:8000/api/chat" -H "Content-Type: application/json" -d '{"message": "Show me all high severity tickets"}'
-```
-
----
+  * `closed` → high confidence
+  * `needs-review` → low confidence
+* **Periodic Slot Extraction**: Every 2 minutes, the system re-checks open tickets to update slot extraction.
+* User can later review/edit/reject via chat.
+* Visualization requests handled via `graph` intent.
 
 ## Future Enhancements
-- Integrate with **PostgreSQL/MySQL** instead of JSON  
-- Connect to **Jira / ServiceNow** for enterprise ticketing  
-- Add **analytics dashboard** (Plotly/Streamlit)  
-- Provide **Docker Compose** setup for FastAPI + Streamlit deployment  
-- Add **multi-agent workflow** (classification agent, fix generator, reviewer agent)  
 
----
+* Store tickets in **PostgreSQL/MySQL** instead of JSON.
+* Enhance with **RAG knowledge base** to give automatic resolutions for tickets.
+* Integration with Jira / ServiceNow.
+* Analytics dashboard with proper frontend tool + Plotly.
+* Docker Compose setup for FastAPI + Front end.
+* Multi-agent workflows via LangGraph (additional agents for analytics, reporting, notifications).
 
-## Contributing
-Pull requests are welcome! Please fork the repo and create a feature branch.  
+## Chat API Example
 
----
+```bash
+curl -X POST "http://localhost:8000/api/chat" \
+-H "Content-Type: application/json" \
+-d '{"message": "Show me all high severity tickets"}'
+```
 
-## License
-MIT License – free for personal and commercial use.  
->>>>>>> 47547fa1c316d78786843bdbc14963ba250367ae
+## LangGraph Workflow Diagram (Mermaid)
+
+```mermaid
+flowchart TD
+    A[User Message] --> B{Intent Detection}
+    B -->|create| C[Slot Extraction: issue_type, severity, affected_system]
+    B -->|view| D[Retrieve Tickets from tickets.json]
+    B -->|review| E[Human-in-loop Review]
+    B -->|delete| F[Delete Ticket]
+    B -->|graph| G[Visualization / Analytics]
+
+    C --> H{Confidence Score}
+    H -->|High| I[Auto-Close Ticket & Suggest Fix]
+    H -->|Low| J[Mark as Needs Review]
+
+    E --> K[Update memory.json]
+    D --> L[Return Tickets to User]
+    F --> M[Ticket Deleted Confirmation]
+    G --> N[Generate Graph / Charts]
+
+    %% Periodic Slot Extraction
+    subgraph Periodic Slot Check
+        direction LR
+        O[Open Tickets] --> P[Re-run Slot Extraction every 2 mins]
+        P --> H
+    end
+
+    style Periodic Slot Check stroke:#ff6600,stroke-width:2px,stroke-dasharray: 5 5
+```
