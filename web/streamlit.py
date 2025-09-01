@@ -1,7 +1,7 @@
 # streamlit_ticket_chatbot.py
 import streamlit as st
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 import base64
 from io import BytesIO
 from PIL import Image
@@ -123,7 +123,7 @@ with st.form(key="chat_form", clear_on_submit=True):
         st.session_state.chat_history.append({
             "user": user_input,
             "bot": bot_response,
-            "timestamp": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+            "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         })
 
 # ------------------------------
