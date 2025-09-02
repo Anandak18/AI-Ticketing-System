@@ -52,7 +52,7 @@ async def process_tickets_once(tickets_path: Path):
         ):
             continue
 
-        # 👇 New ticket found
+        # New ticket found
         logging.info(f"[Ticket {t['ticket_no']}] New ticket found. Processing...")
 
         desc = t.get('description', '')

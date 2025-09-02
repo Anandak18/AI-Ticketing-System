@@ -2,13 +2,15 @@ import os
 from openai import AzureOpenAI
 import json
 import re
+from dotenv import load_dotenv
+
+load_dotenv()
 
 client = AzureOpenAI(
     api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-    api_version="2024-02-15-preview",
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+    api_version=os.getenv("AZURE_API_VERSION"),
+    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
 )
-
 
 
 def is_valid_comment(comment: str) -> dict:

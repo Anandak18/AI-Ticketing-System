@@ -109,7 +109,9 @@ User submits message:
 * Integration with Jira / ServiceNow.
 * Analytics dashboard with proper frontend tool + Plotly.
 * Docker Compose setup for FastAPI + Front end.
-* Multi-agent workflows via LangGraph (additional agents for analytics, reporting, notifications).
+* Usage of Pytest for validation of the functions implement for deployments
+* Valkey message broker for communicating between the services and handling multiple requests from the client.
+
 
 ## Chat API Example
 
@@ -119,7 +121,7 @@ curl -X POST "http://localhost:8000/api/chat" \
 -d '{"message": "Show me all high severity tickets"}'
 ```
 
-## LangGraph Workflow Diagram (Mermaid)
+## LangGraph Workflow Diagram 
 
 ```mermaid
 flowchart TD
@@ -148,3 +150,27 @@ flowchart TD
 
     style Periodic Slot Check stroke:#ff6600,stroke-width:2px,stroke-dasharray: 5 5
 ```
+
+
+
+## LangGraph Sequence Diagram 
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant FastAPI as FastAPI (POST /chat)
+    participant LangGraph as LangGraph Router
+    participant LLM as LLM (Router Node)
+    participant Handler as View Handler
+    participant Disk as Tickets/Memory (JSON)
+
+    Client->>FastAPI: POST /chat { "message": "Show closed cases by severity" }
+    FastAPI->>LangGraph: Start state (message, tickets, memory)
+    LangGraph->>LLM: Route request
+    LLM-->>LangGraph: Intent = view
+    LangGraph->>Handler: Call view handler
+    Handler->>Disk: Load tickets.json + memory.json
+    Handler-->>LangGraph: Computed response (closed cases by severity)
+    LangGraph->>FastAPI: Final state (response, updated memory)
+    FastAPI-->>Client: JSON { "response": "Closed cases: High=5, Medium=3, Low=2" }
+    FastAPI->>Disk: Save updated memory.json
